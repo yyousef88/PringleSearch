@@ -1,0 +1,8 @@
+.form-control{
+	border-radius: 20px;
+}
+.links{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
