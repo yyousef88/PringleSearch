@@ -23,7 +23,7 @@ def getCurrentMemoryUsage(l):
     process = psutil.Process(os.getpid())
     return process.memory_info().rss/pow(1000,2)
 
-#borrowed from Assignment 2
+#hashes url using sha256 encryption
 def get_urlhash(url):
     parsed = urlparse(url)
     # everything other than scheme.
@@ -31,7 +31,7 @@ def get_urlhash(url):
         f"{parsed.netloc}/{parsed.path}/{parsed.params}/"
         f"{parsed.query}/{parsed.fragment}".encode("utf-8")).hexdigest()
 
-#borrowed from Assignment 2  
+#removes "/" from end of url
 def normalize(url):
     if url.endswith("/"):
         return url.rstrip("/")
